@@ -69,6 +69,7 @@ img { max-width: 100%; display: block; }
   text-decoration: none;
   padding: 13px 28px;
   border-radius: 999px;
+  white-space: nowrap;
   transition: background .15s ease, transform .15s ease;
 }
 
