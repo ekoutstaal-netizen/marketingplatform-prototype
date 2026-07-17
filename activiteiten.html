@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activiteitenkalender — Marketing Platform Werkontwikkelbedrijven</title>
+  <meta name="description" content="Bijeenkomsten, workshops en deadlines van het Marketing Platform Werkontwikkelbedrijven.">
+  <link rel="icon" type="image/png" href="assets/logo-icoon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/stijl.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inhoud">
+    <a class="logo-link" href="index.html">
+      <img src="assets/logo-icoon.png" alt="Logo Marketing Platform Werkontwikkelbedrijven">
+      <span class="logo-tekst">
+        <span class="regel1">MARKETING<br>PLATFORM</span><br>
+        <span class="regel2">WERKONTWIKKELBEDRIJVEN</span>
+      </span>
+    </a>
+    <button class="menu-knop" aria-label="Menu openen" aria-expanded="false" onclick="toggleMenu(this)">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="hoofdnav" id="hoofdnav" aria-label="Hoofdnavigatie">
+      <a href="index.html">Home</a>
+      <a href="activiteiten.html" class="actief">Activiteiten</a>
+      <a href="over-het-platform.html">Over het platform</a>
+      <a href="over-het-platform.html#downloads">Downloads</a>
+      <a href="index.html#lid-worden">Contact</a>
+      <a href="#aanmelden" class="knop knop-primair">Activiteit aanmelden</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="pagina-kop">
+      <h1>Activiteitenkalender</h1>
+      <p class="intro">Alle bijeenkomsten, workshops en deadlines van het platform op een rij. Leden dienen activiteiten in, het bestuur keurt ze goed en publiceert ze hier.</p>
+    </div>
+
+    <div class="kalender-acties" id="aanmelden">
+      <div class="filterbalk" role="group" aria-label="Filter op categorie">
+        <button class="filter actief" data-cat="alle">Alle</button>
+        <button class="filter" data-cat="algemeen">Algemeen</button>
+        <button class="filter" data-cat="bijeenkomsten">Bijeenkomsten</button>
+        <button class="filter" data-cat="workshops">Workshops</button>
+        <button class="filter" data-cat="deadlines">Deadlines</button>
+      </div>
+      <a class="knop knop-primair" href="mailto:info@marketingplatform.nl?subject=Activiteit%20aanmelden">Activiteit aanmelden</a>
+    </div>
+
+    <div class="kalender-lijst">
+
+      <article class="kalender-item item-magenta" data-cat="bijeenkomsten">
+        <div class="datumblok" aria-hidden="true">
+          <span class="dag">10</span>
+          <span class="maand">september</span>
+        </div>
+        <div>
+          <h3>Netwerkbijeenkomst najaar</h3>
+          <p class="omschrijving">Ontmoet collega's uit de sector, wissel ervaringen uit en hoor de plannen voor het najaar.</p>
+          <p class="meta"><span>Utrecht</span><span>Werkontwikkelbedrijf Midden-Nederland</span></p>
+        </div>
+        <span class="label label-magenta">Bijeenkomsten</span>
+      </article>
+
+      <article class="kalender-item item-groen" data-cat="workshops">
+        <div class="datumblok" aria-hidden="true">
+          <span class="dag">24</span>
+          <span class="maand">september</span>
+        </div>
+        <div>
+          <h3>Workshop storytelling voor werkontwikkelbedrijven</h3>
+          <p class="omschrijving">Leer hoe je de verhalen van medewerkers en opdrachtgevers krachtig vertelt in tekst en beeld.</p>
+          <p class="meta"><span>Zwolle</span><span>Werkontwikkelbedrijf Overijssel</span></p>
+        </div>
+        <span class="label label-groen">Workshops</span>
+      </article>
+
+      <article class="kalender-item item-oranje" data-cat="deadlines">
+        <div class="datumblok" aria-hidden="true">
+          <span class="dag">1</span>
+          <span class="maand">oktober</span>
+        </div>
+        <div>
+          <h3>Deadline aanleveren campagnemateriaal Week van de Inclusieve Arbeidsmarkt</h3>
+          <p class="omschrijving">Lever je lokale materiaal aan zodat we de landelijke campagne op tijd kunnen bundelen.</p>
+          <p class="meta"><span>Online</span><span>Marketing Platform Werkontwikkelbedrijven</span></p>
+        </div>
+        <span class="label label-oranje">Deadlines</span>
+      </article>
+
+      <article class="kalender-item item-magenta" data-cat="bijeenkomsten">
+        <div class="datumblok" aria-hidden="true">
+          <span class="dag">12</span>
+          <span class="maand">november</span>
+        </div>
+        <div>
+          <h3>Landelijke campagnedag</h3>
+          <p class="omschrijving">De aftrap van de gezamenlijke landelijke campagne, met alle deelnemende werkontwikkelbedrijven.</p>
+          <p class="meta"><span>Rotterdam</span><span>Werkontwikkelbedrijf Rijnmond</span></p>
+        </div>
+        <span class="label label-magenta">Bijeenkomsten</span>
+      </article>
+
+      <p id="geen-resultaten" class="omschrijving" hidden>Geen activiteiten in deze categorie. Kies een andere categorie of bekijk alle activiteiten.</p>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inhoud">
+    <div class="footer-logo-chip">
+      <img src="assets/logo-volledig.png" alt="Marketing Platform Werkontwikkelbedrijven">
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="mailto:info@marketingplatform.nl">info@marketingplatform.nl</a></li>
+        <li><a href="tel:+31612345678">+31 6 12345678</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Links</h3>
+      <ul>
+        <li><a href="over-het-platform.html">Over het platform</a></li>
+        <li><a href="activiteiten.html">Activiteiten</a></li>
+        <li><a href="#">Privacyverklaring</a></li>
+        <li><a href="#">Algemene voorwaarden</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-onder">
+    © 2026 Marketing Platform Werkontwikkelbedrijven
+  </div>
+</footer>
+
+<script>
+function toggleMenu(knop) {
+  const nav = document.getElementById('hoofdnav');
+  const open = nav.classList.toggle('open');
+  knop.setAttribute('aria-expanded', open);
+  knop.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+}
+
+// Categoriefilter
+const filters = document.querySelectorAll('.filter');
+const items = document.querySelectorAll('.kalender-item');
+const geenResultaten = document.getElementById('geen-resultaten');
+
+filters.forEach(f => f.addEventListener('click', () => {
+  filters.forEach(x => x.classList.remove('actief'));
+  f.classList.add('actief');
+  const cat = f.dataset.cat;
+  let zichtbaar = 0;
+  items.forEach(item => {
+    const toon = cat === 'alle' || item.dataset.cat === cat;
+    item.classList.toggle('verborgen', !toon);
+    if (toon) zichtbaar++;
+  });
+  geenResultaten.hidden = zichtbaar > 0;
+}));
+</script>
+
+</body>
+</html>
