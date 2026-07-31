@@ -1,0 +1,41 @@
+name: Berichten ophalen
+
+# Haalt vier keer per dag de nieuwsberichten op uit de feeds van de leden
+# en schrijft het resultaat naar data/berichten.json.
+on:
+  schedule:
+    - cron: '0 4,10,14,18 * * *'   # tijden in UTC
+  workflow_dispatch:               # handmatig starten via het tabblad Actions
+
+permissions:
+  contents: write
+
+jobs:
+  ophalen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+
+      - name: Python instellen
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Benodigde pakketten installeren
+        run: pip install feedparser
+
+      - name: Berichten ophalen
+        run: python3 scripts/berichten_ophalen.py
+
+      - name: Wijzigingen vastleggen
+        run: |
+          if [[ -z "$(git status --porcelain data/berichten.json)" ]]; then
+            echo "Geen nieuwe berichten, niets vast te leggen."
+            exit 0
+          fi
+          git config user.name  "Berichtenrobot Marketing Platform"
+          git config user.email "actions@github.com"
+          git add data/berichten.json
+          git commit -m "Berichten bijgewerkt op $(date -u '+%d-%m-%Y %H:%M') UTC"
+          git push
