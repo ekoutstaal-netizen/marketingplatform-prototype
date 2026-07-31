@@ -1,0 +1,46 @@
+{
+  "laatstBijgewerkt": "2026-07-31",
+  "toelichting": "Dit bestand wordt gevuld door Power Automate na goedkeuring door het bestuur. Handmatig bewerken kan, maar houd de structuur exact aan. Categorie moet een van deze vier zijn: Bijeenkomsten, Workshops, Deadlines, Algemeen.",
+  "activiteiten": [
+    {
+      "id": "2026-09-10-netwerkbijeenkomst-najaar",
+      "datum": "2026-09-10",
+      "titel": "Netwerkbijeenkomst najaar",
+      "omschrijving": "Ontmoet collega's uit de sector, wissel ervaringen uit en hoor de plannen voor het najaar.",
+      "locatie": "Utrecht",
+      "organisatie": "Werkontwikkelbedrijf Midden-Nederland",
+      "categorie": "Bijeenkomsten",
+      "aanmeldlink": ""
+    },
+    {
+      "id": "2026-09-24-workshop-storytelling",
+      "datum": "2026-09-24",
+      "titel": "Workshop storytelling voor werkontwikkelbedrijven",
+      "omschrijving": "Leer hoe je de verhalen van medewerkers en opdrachtgevers krachtig vertelt in tekst en beeld.",
+      "locatie": "Zwolle",
+      "organisatie": "Werkontwikkelbedrijf Overijssel",
+      "categorie": "Workshops",
+      "aanmeldlink": ""
+    },
+    {
+      "id": "2026-10-01-deadline-campagnemateriaal",
+      "datum": "2026-10-01",
+      "titel": "Deadline aanleveren campagnemateriaal Week van de Inclusieve Arbeidsmarkt",
+      "omschrijving": "Lever je lokale materiaal aan zodat we de landelijke campagne op tijd kunnen bundelen.",
+      "locatie": "Online",
+      "organisatie": "Marketing Platform Werkontwikkelbedrijven",
+      "categorie": "Deadlines",
+      "aanmeldlink": ""
+    },
+    {
+      "id": "2026-11-12-landelijke-campagnedag",
+      "datum": "2026-11-12",
+      "titel": "Landelijke campagnedag",
+      "omschrijving": "De aftrap van de gezamenlijke landelijke campagne, met alle deelnemende werkontwikkelbedrijven.",
+      "locatie": "Rotterdam",
+      "organisatie": "Werkontwikkelbedrijf Rijnmond",
+      "categorie": "Bijeenkomsten",
+      "aanmeldlink": ""
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "toelichting": "Nieuwsbronnen van aangesloten werkontwikkelbedrijven. Zet actief op false om een bron tijdelijk uit te schakelen zonder de gegevens kwijt te raken. Het verzamelscript leest alleen bronnen met actief true.",
+  "instellingen": {
+    "maxPerBron": 8,
+    "maxTotaal": 60,
+    "maxLeeftijdDagen": 365,
+    "maxTekensSamenvatting": 220,
+    "blokkeerwoorden": []
+  },
+  "bronnen": [
+    {
+      "naam": "Voorbeeld Werkontwikkelbedrijf",
+      "website": "https://www.voorbeeld.nl",
+      "feed": "https://www.voorbeeld.nl/feed/",
+      "actief": false,
+      "opmerking": "Voorbeeldregel. Vervang door een echte bron en zet actief op true."
+    }
+  ]
+}

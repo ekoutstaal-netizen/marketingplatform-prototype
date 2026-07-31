@@ -430,6 +430,17 @@ img { max-width: 100%; display: block; }
 
 .kalender-item.verborgen { display: none; }
 
+/* Optionele verwijzing bij een activiteit, alleen zichtbaar als aanmeldlink is gevuld */
+.kalender-item .kaart-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--kop);
+  font-weight: 500;
+  font-size: .92rem;
+  color: var(--blauw-donker);
+}
+.kalender-item .kaart-link:hover { text-decoration: underline; }
+
 /* ---------- Over het platform ---------- */
 .intro-blok { padding: 8px 0 40px; }
 
@@ -600,4 +611,75 @@ a:focus-visible, button:focus-visible {
   .hero { padding: 56px 0 48px; }
 
   .hero .ster-markering { width: 200px; height: 200px; top: -40px; right: -60px; }
+}
+
+/* ---------- Berichten uit de sector ---------- */
+.berichten-lijst {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  padding-bottom: 40px;
+}
+
+.bericht-kaart {
+  background: var(--oranje-licht);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bericht-kop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bericht-datum {
+  font-family: var(--kop);
+  font-weight: 500;
+  font-size: .85rem;
+  color: var(--oranje);
+  white-space: nowrap;
+}
+
+.bericht-kaart h3 { font-size: 1.15rem; }
+
+.bericht-kaart h3 a {
+  color: var(--antraciet);
+  text-decoration: none;
+}
+
+.bericht-kaart h3 a:hover { text-decoration: underline; }
+
+.bericht-kaart .omschrijving { font-size: .98rem; }
+
+.bericht-herkomst {
+  margin-top: auto;
+  font-family: var(--kop);
+  font-weight: 500;
+  font-size: .85rem;
+  color: var(--oranje);
+}
+
+.bericht-kaart.verborgen { display: none; }
+
+.bronfilter .filter.actief {
+  background: var(--oranje);
+  border-color: var(--oranje);
+  color: #fff;
+}
+
+.bron-toelichting {
+  background: var(--neutraal-licht);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  font-size: .98rem;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 760px) {
+  .berichten-lijst { grid-template-columns: 1fr; }
 }

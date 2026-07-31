@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activiteitenkalender — Marketing Platform Werkontwikkelbedrijven</title>
-  <meta name="description" content="Bijeenkomsten, workshops en deadlines van het Marketing Platform Werkontwikkelbedrijven.">
+  <title>Berichten — Marketing Platform Werkontwikkelbedrijven</title>
+  <meta name="description" content="Nieuws van de aangesloten werkontwikkelbedrijven, verzameld op een plek.">
   <link rel="icon" type="image/png" href="assets/logo-icoon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +27,8 @@
     </button>
     <nav class="hoofdnav" id="hoofdnav" aria-label="Hoofdnavigatie">
       <a href="index.html">Home</a>
-      <a href="activiteiten.html" class="actief">Activiteiten</a>
-      <a href="berichten.html">Berichten</a>
+      <a href="activiteiten.html">Activiteiten</a>
+      <a href="berichten.html" class="actief">Berichten</a>
       <a href="over-het-platform.html">Over het platform</a>
       <a href="over-het-platform.html#downloads">Downloads</a>
       <a href="index.html#lid-worden">Contact</a>
@@ -41,26 +41,20 @@
   <div class="container">
 
     <div class="pagina-kop">
-      <h1>Activiteitenkalender</h1>
-      <p class="intro">Alle bijeenkomsten, workshops en deadlines van het platform op een rij. Leden dienen activiteiten in, het bestuur keurt ze goed en publiceert ze hier.</p>
+      <h1>Berichten uit de sector</h1>
+      <p class="intro">Nieuws van de aangesloten werkontwikkelbedrijven, automatisch verzameld en op datum gesorteerd. Elk bericht linkt door naar het volledige artikel op de site van de organisatie zelf.</p>
     </div>
 
-    <div class="kalender-acties" id="aanmelden">
-      <div class="filterbalk" role="group" aria-label="Filter op categorie">
-        <button class="filter actief" data-cat="alle">Alle</button>
-        <button class="filter" data-cat="algemeen">Algemeen</button>
-        <button class="filter" data-cat="bijeenkomsten">Bijeenkomsten</button>
-        <button class="filter" data-cat="workshops">Workshops</button>
-        <button class="filter" data-cat="deadlines">Deadlines</button>
-      </div>
-      <a class="knop knop-primair" href="mailto:info@marketingplatformnl.nl?subject=Activiteit%20aanmelden">Activiteit aanmelden</a>
+    <div class="kalender-acties">
+      <div class="bronfilter filterbalk" role="group" aria-label="Filter op bron"></div>
     </div>
 
-    <div class="kalender-lijst">
-
-      <p id="geen-resultaten" class="omschrijving" hidden>Geen activiteiten in deze categorie. Kies een andere categorie of bekijk alle activiteiten.</p>
-
+    <div class="berichten-lijst" aria-live="polite">
+      <p id="geen-berichten" class="omschrijving" hidden>Berichten laden…</p>
     </div>
+
+    <p class="bron-toelichting">Staat het nieuws van jouw werkontwikkelbedrijf hier nog niet bij? Stuur het adres van jullie nieuwspagina naar <a href="mailto:info@marketingplatformnl.nl?subject=Nieuwsbron%20aanmelden">info@marketingplatformnl.nl</a>, dan voegen wij de bron toe.</p>
+
   </div>
 </main>
 
@@ -92,7 +86,7 @@
   </div>
 </footer>
 
-<script src="js/activiteiten.js"></script>
+<script src="js/berichten.js"></script>
 <script>
 function toggleMenu(knop) {
   const nav = document.getElementById('hoofdnav');
@@ -101,8 +95,8 @@ function toggleMenu(knop) {
   knop.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
 }
 
-// Activiteiten laden uit data/activiteiten.json en de categoriefilter activeren
-toonKalender('data/activiteiten.json');
+// Berichten laden uit data/berichten.json
+toonBerichten('data/berichten.json');
 </script>
 
 </body>

@@ -28,6 +28,7 @@
     <nav class="hoofdnav" id="hoofdnav" aria-label="Hoofdnavigatie">
       <a href="index.html" class="actief">Home</a>
       <a href="activiteiten.html">Activiteiten</a>
+      <a href="berichten.html">Berichten</a>
       <a href="over-het-platform.html">Over het platform</a>
       <a href="over-het-platform.html#downloads">Downloads</a>
       <a href="index.html#lid-worden">Contact</a>
@@ -57,26 +58,18 @@
         <h2>Eerstvolgende activiteiten</h2>
         <a class="alles-link" href="activiteiten.html">Alle activiteiten →</a>
       </div>
-      <div class="kaarten-rij">
-        <a class="activiteit-kaart kaart-magenta" href="activiteiten.html">
-          <span class="label label-magenta">Bijeenkomsten</span>
-          <span class="datum">10 september 2026</span>
-          <h3>Netwerkbijeenkomst najaar</h3>
-          <span class="locatie">Utrecht</span>
-        </a>
-        <a class="activiteit-kaart kaart-groen" href="activiteiten.html">
-          <span class="label label-groen">Workshops</span>
-          <span class="datum">24 september 2026</span>
-          <h3>Workshop storytelling voor werkontwikkelbedrijven</h3>
-          <span class="locatie">Zwolle</span>
-        </a>
-        <a class="activiteit-kaart kaart-oranje" href="activiteiten.html">
-          <span class="label label-oranje">Deadlines</span>
-          <span class="datum">1 oktober 2026</span>
-          <h3>Deadline campagnemateriaal Week van de Inclusieve Arbeidsmarkt</h3>
-          <span class="locatie">Online</span>
-        </a>
+      <div class="kaarten-rij" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- Laatste berichten uit de sector -->
+  <section class="sectie" id="laatste-berichten" hidden>
+    <div class="container">
+      <div class="sectie-kop">
+        <h2>Laatste berichten uit de sector</h2>
+        <a class="alles-link" href="berichten.html">Alle berichten →</a>
       </div>
+      <div class="berichten-rij kaarten-rij" aria-live="polite"></div>
     </div>
   </section>
 
@@ -112,7 +105,7 @@
           <h2>Word lid van het platform</h2>
           <p>Werk je in sales, communicatie of marketing bij een werkontwikkelbedrijf? Sluit je aan en vergroot samen met collega's uit het hele land de zichtbaarheid van de sector.</p>
         </div>
-        <a class="knop knop-primair" href="mailto:info@marketingplatform.nl?subject=Lid%20worden">Lid worden</a>
+        <a class="knop knop-primair" href="mailto:info@marketingplatformnl.nl?subject=Lid%20worden">Lid worden</a>
       </div>
     </div>
   </section>
@@ -127,7 +120,7 @@
     <div>
       <h3>Contact</h3>
       <ul>
-        <li><a href="mailto:info@marketingplatform.nl">info@marketingplatform.nl</a></li>
+        <li><a href="mailto:info@marketingplatformnl.nl">info@marketingplatformnl.nl</a></li>
         <li><a href="tel:+31612345678">+31 6 12345678</a></li>
       </ul>
     </div>
@@ -136,6 +129,7 @@
       <ul>
         <li><a href="over-het-platform.html">Over het platform</a></li>
         <li><a href="activiteiten.html">Activiteiten</a></li>
+        <li><a href="berichten.html">Berichten</a></li>
         <li><a href="#">Privacyverklaring</a></li>
         <li><a href="#">Algemene voorwaarden</a></li>
       </ul>
@@ -146,7 +140,12 @@
   </div>
 </footer>
 
+<script src="js/activiteiten.js"></script>
+<script src="js/berichten.js"></script>
 <script>
+toonEerstvolgende('data/activiteiten.json');
+toonLaatsteBerichten('data/berichten.json');
+
 function toggleMenu(knop) {
   const nav = document.getElementById('hoofdnav');
   const open = nav.classList.toggle('open');
